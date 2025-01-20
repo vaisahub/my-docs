@@ -1,0 +1,41 @@
+Where to store user session informations such as 
+
+- Search results, 
+- Filters, 
+- User selections made in the UI
+
+Temporarly.
+
+## 1. Browser Session Storage (sessionStorage):
+
+Pros: Simple to use, data persists only for the duration of the browser tab/window. Automatically cleared when the tab/window is closed. Good for data that doesn't need to survive a page refresh.
+Cons: Limited storage capacity (typically 5-10MB), data is only accessible within the same tab/window. Not suitable for sensitive information.
+
+##  2. Browser Local Storage (localStorage):
+
+Pros: Simple to use, data persists even after the browser is closed and reopened. Good for preserving user preferences or UI state across sessions.
+Cons: Larger storage capacity than session storage (around 50MB), but still limited. Data is accessible to all tabs/windows from the same origin. Not suitable for sensitive information.
+
+## 3. In-Memory Data Structures (Server-Side):
+
+Pros: Fast access, suitable for complex data structures. Data is only stored for the duration of the user's session on the server.
+Cons: Requires server-side infrastructure and resources. Session data is lost if the server restarts or the user's session expires.
+
+##  4. Server-Side Caching (e.g., Redis, Memcached):
+
+Pros: Fast access, can handle larger amounts of data than in-memory structures. Data can persist across server restarts (depending on the caching strategy).
+Cons: Requires setting up and managing a caching server. More complex than in-memory storage.
+
+##  5. Cookies:
+
+Pros: Simple to use, data is sent with every request to the server.
+Cons: Limited storage capacity (4KB), can impact performance if used excessively. Can be accessed by other websites if not properly secured. Not suitable for large amounts of data or sensitive information.
+
+##  6. Database (Temporary Tables):
+
+Pros: Can handle large amounts of data, data can be structured and queried efficiently.
+Cons: More complex to implement than other options. Adds overhead to the database. Ensure proper cleanup of temporary data.
+
+## 7. Broadcast Channel API
+
+The Broadcast Channel API allows simple communication between browsing contexts (tabs, windows, iframes) sharing the same origin. You could use this to synchronize state updates across tabs, 
