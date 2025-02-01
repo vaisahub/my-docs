@@ -1,7 +1,7 @@
 
 PWA - Progressive Web App
 
-## Install -> Npm package next-pwa
+## Install -> npm package next-pwa
 ##         -> workbox-webpack-plugin   
 
 const withPWA = require('next-pwa')({
