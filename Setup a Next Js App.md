@@ -77,6 +77,11 @@ Add Prettier to your ESLint configuration:
   ]
 }
 
+## add prettier for code formating
+
+--> npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
+
+
 ## Final package
 {
   "scripts": {
