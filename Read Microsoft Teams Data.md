@@ -4,6 +4,8 @@
 Microsoft Purview compliance portal
 Purview eDiscovery (Premium)
 
+## Microsoft Graph API End points to p2p chats
+
 
 
 
